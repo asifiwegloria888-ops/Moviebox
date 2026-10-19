@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { Typography } from "@mui/material";
 import Layout from "./components/Layout";
 import Home from "./pages/home";
+import Search from "./pages/Search";
 
 // Pages provisoires, on les remplacera une par une
 const Page = ({ name }) => <Typography variant="h4">{name}</Typography>;
@@ -14,7 +15,7 @@ export default function App() {
         <Route path="/movies" element={<Page name="Movies" />} />
         <Route path="/tv" element={<Page name="TV Shows" />} />
         <Route path="/watchlist" element={<Page name="My Watchlist" />} />
-        <Route path="/search" element={<Page name="Search results" />} />
+        <Route path="/search" element={<Search />} />
         <Route path="/:type/:id" element={<Page name="Details" />} />
       </Route>
     </Routes>

@@ -25,7 +25,9 @@ export default function Layout() {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
   const [open, setOpen] = useState(false);
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState(
+  new URLSearchParams(window.location.search).get("q") || ""
+);
   const navigate = useNavigate();
   const { pathname } = useLocation();
 
