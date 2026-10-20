@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Box, Typography, Chip, Button, Skeleton, Alert } from "@mui/material";
 import { tmdb } from "../api/tmdb";
-import MovieCard from "../components/movieCard";
+import MovieCard from "../components/MovieCard";
 
 function SearchResults({ q }) {
   const [items, setItems] = useState([]);

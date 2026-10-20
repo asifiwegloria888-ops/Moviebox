@@ -3,9 +3,13 @@ import { useParams, useNavigate } from "react-router-dom";
 import { Box, Typography, Chip, Button, Skeleton, Alert, Rating } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { tmdb, IMG_LARGE, BACKDROP } from "../api/tmdb";
+import BookmarkAddIcon from "@mui/icons-material/BookmarkAdd";
+import BookmarkRemoveIcon from "@mui/icons-material/BookmarkRemove";
+import { useWatchlist } from "../context/WatchlistContext";
 
 function DetailsContent({ type, id }) {
   const navigate = useNavigate();
+  const { isSaved, toggle } = useWatchlist();
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

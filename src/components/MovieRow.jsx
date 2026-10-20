@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Box, Typography, Skeleton, Alert } from "@mui/material";
 import { tmdb } from "../api/tmdb";
-import MovieCard from "./movieCard";
+import MovieCard from "./MovieCard";
 
 export default function MovieRow({ title, path, mediaType }) {
   const [items, setItems] = useState([]);
