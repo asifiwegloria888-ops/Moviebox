@@ -2,6 +2,8 @@ const BASE = "https://api.themoviedb.org/3";
 const KEY = import.meta.env.VITE_TMDB_KEY;
 
 export const IMG = "https://image.tmdb.org/t/p/w342";
+export const IMG_LARGE = "https://image.tmdb.org/t/p/w500";
+export const BACKDROP = "https://image.tmdb.org/t/p/w1280";
 
 export async function tmdb(path, params = {}) {
   const url = new URL(BASE + path);
